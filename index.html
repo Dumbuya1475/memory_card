@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="animation.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="hero" id="hero">
+        <header>
+            <div class="logo">Memory Card</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about" target="_top">About</a></li>
+                    <li><a href="#howToPlay" target="_top">How to play</a></>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li id="cta-btn"><a href="game.html">Play <span>Now!</span></a></li>
+                    <!-- <li><a href="">Sign Up</a></li> -->
+                    <!-- <li><a href="">Login</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <div class="hero-body">
+            <div class="img-box card">
+                <!-- <div class="view card-front"> -->
+                <!-- <img src="./assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="question-icon" /> -->
+                <!-- </div> -->
+                <div class="view card-back">
+                    <img src="assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="">
+                </div>
+            </div>
+            <div class="hero-text">
+                <p>Test your memory skills!</p>
+                <h1>Match the pairs to win</h1>
+                <p>A fun and challenging game for all ages.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="about" id="about">
+            <div class="img-box">
+                <img src="assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="about-img">
+            </div>
+            <div class="about-text">
+                <h2>About the game</h2>
+                <p>
+                    Welcome to the Memory Card Game! Match the pairs and complete the game in the shortest time
+                    possible. Challenge yourself with different levels and themes. Click the button below to start
+                    playing!
+                </p>
+                <a href="game.html" class="cta-button">Start <span>Playing</span></a>
+            </div>
+        </section>
+
+        <section class="how-to-play" id="howToPlay">
+            <div class="img-box" data-aos="fade-right">
+                <img src="assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="about-img">
+            </div>
+            <div class="tagline">
+                <h2>How to play</h2>
+                <p>
+                    Welcome to the Memory Card Game! Match the pairs and complete the game in the shortest time
+                    possible. Challenge yourself with different levels and themes. Click the button below to start
+                    playing!
+                </p>
+                <a href="game.html" class="cta-button">Start <span>Playing</span></a>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="img-box">
+                <img src="assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="">
+            </div>
+            <div class="tagline">
+                <h2>Features</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro desert neque accusamus dolor's
+                    praesentium qui similique quam beatae. Necessitatibus nesciunt enid velit ipsam, veritatis cum
+                    delectus
+                    cupiditate magnam impedit?
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Memory Card Game. All rights reserved.</p>
+            <div class="terms">
+                <a href="privacy.html" style="color: #9da0a2;">Privacy Policy</a> |
+                <a href="contact.html" style="color: #9da0a2;">Contact Us</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        "use strict";
+
+        // Selecting Elements
+        const cards = document.querySelectorAll(".card");
+
+        // Required Variables
+        let maxTime = 25;
+        let timeLeft = maxTime;
+        let flips = 0;
+        let matchedCard = 0;
+        let disableDeck = false;
+        let isPlaying = false;
+        let card1, card2, timer;
+
+        // Function FlipCard
+        function flipCard({ target: clickedCard }) {
+            if (!isPlaying) {
+                isPlaying = true;
+                timer = setInterval(initialTimer, 1000);
+            }
+            if (clickedCard !== card1 && !disableDeck && timeLeft > 0) {
+                flips++;
+                flipsTag.innerText = flips;
+                clickedCard.classList.add("flip");
+                if (!card1) {
+                    return (card1 = clickedCard);
+                }
+                card2 = clickedCard;
+                disableDeck = true;
+                let card1Img = card1.querySelector(".back-view img").src,
+                    card2Img = card2.querySelector(".back-view img").src;
+                matchCard(card1Img, card2Img);
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
