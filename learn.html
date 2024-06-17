@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            overscroll-beahavior: contain;
+        }
+
+        .grid {
+            --col: 9.5rem;
+            --row: 8rem;
+            --gap: 2rem;
+
+            display: grid;
+            grid-template-columns: repeat(3, var(--col));
+            grid-template-rows: repeat(4, var(--row));
+            grid-gap: var(--gap);
+        }
+
+        .grid--full {
+            --col: 30%;
+            --row: 4rem;
+            --gap: 1rem;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .grid {
+                transition: all 1s;
+            }
+        }
+
+        button {
+            background-color: #123456;
+            color: #ffffff;
+            margin: 2rem 0;
+            padding: 1.4rem;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        button:focus-visible {
+            outline: 4px solid #123456;
+            outline-offset: 4px;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Check <a href="https://www.matuzo.at/blog/2023/100daysof-day97/">this post</a> for more details</p>
+
+    <button class="js-button">Animate</button>
+
+    <div class="grid js-grid">
+        <div class="item">
+            <h2>Element 1</h2>
+        </div>
+        <div class="item">
+            <h2>Element 2</h2>
+        </div>
+        <div class="item">
+            <h2>Element 3</h2>
+        </div>
+        <div class="item">
+            <h2>Element 4</h2>
+        </div>
+        <div class="item">
+            <h2>Element 5</h2>
+        </div>
+        <div class="item">
+            <h2>Element 6</h2>
+        </div>
+        <div class="item">
+            <h2>Element 7</h2>
+        </div>
+        <div class="item">
+            <h2>Element 8</h2>
+        </div>
+        <div class="item">
+            <h2>Element 9</h2>
+        </div>
+        <div class="item">
+            <h2>Element 10</h2>
+        </div>
+        <div class="item">
+            <h2>Element 11</h2>
+        </div>
+        <div class="item">
+            <h2>Element 12</h2>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.js-button').addEventListener('click', function () {
+            document.querySelector('.js-grid').classList.toggle('grid--full')
+        })
+
+    </script>
+</body>
+
+</html>

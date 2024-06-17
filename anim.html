@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            opacity: 0;
+            /* Initially hidden */
+            transform: scale(0.8);
+            /* Initially scaled down */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            /* Transition for animations */
+        }
+
+        .content-section.visible {
+            opacity: 1;
+            transform: scale(1);
+            /* Animate to full size */
+        }
+
+        .fade-in {
+            /* Animation for fade-in effect */
+            animation: fadeIn 5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .zoom-in {
+            /* Animation for zoom-in effect */
+            animation: zoomIn 0s ease-in-out forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(8);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .slide-up {
+            /* Animation for slide-up effect */
+            animation: slideUp 5s ease-in-out forwards;
+            transform: translateY(20px);
+            /* Initially translated upwards */
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section fade-in">
+        <h2>This content will fade in on scroll</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices velit eget leo hendrerit ultrices.
+        </p>
+    </section>
+    <section class="content-section zoom-in">
+        <h2>This content will zoom in on scroll</h2>
+        <p>Donec vel ipsum vel magna porta gravida. Nullam vitae elit libero, a pharetra augue.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <section class="content-section slide-up">
+        <h2>This content will slide up on scroll</h2>
+        <p>Phasellus eget enim eu lectus pretium lacinia. Vivamus suscipit tortor eget turpis porta, vel aliquam lorem
+            ullamcorper.</p>
+    </section>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        });
+
+        const contentSections = document.querySelectorAll('.content-section');
+        contentSections.forEach(section => observer.observe(section));
+
+    </script>
+</body>
+
+</html>

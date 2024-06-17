@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search Bar Example</title>
+</head>
+
+<body>
+  <input type="text" id="search" placeholder="Search..." onkeyup="search()">
+  <p id="output"></p>
+
+  <script>
+    function search() {
+      // Get the value from the input element
+      var searchTerm = document.getElementById('search').value;
+
+      // Perform some processing or logic based on the search term
+      // For example, you can check if it matches a specific value or use regular expressions
+
+      // Simulate a simple example by checking for a specific search term
+      var list ={}
+      var myList = [
+        'mango',
+        'banana'
+      ]
+
+      if ('banana' = myList){
+        alert('hello')
+      } else{
+        alert('void')
+      }
+      // if (searchTerm === 'hello') {
+      //   document.getElementById('output').innerHTML = 'You typed: ' + searchTerm;
+      // } else {
+      //   document.getElementById('output').innerHTML = 'No matching result for the search term: ' + searchTerm;
+      // }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Card Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            perspective: 1000px;
+            /* Important for 3D flipping effect */
+            margin: 0 auto;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+            /* Transition for smooth flip */
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            /* Prevents flickering */
+        }
+
+        .card-front {
+            background-color: #007bff;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-back {
+            background-color: #ffc107;
+            color: #000;
+            transform: rotateY(180deg);
+            /* Initially rotated for back side */
+        }
+
+        .card.flip {
+            transform: rotateY(180deg);
+            /* Flips the card on click */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-front">Front Side</div>
+        <div class="card-back">Back Side</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
