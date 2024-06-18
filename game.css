@@ -1,104 +1,148 @@
-body {
+* {
+	border: none;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 	font-family: 'Arial', sans-serif;
+}
+
+body {
 	background-color: #f0f0f0;
 	/* background-color: #000; */
-	/* margin: 0; */
-	/* display: flex; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* height: 100vh; */
-	/* overflow: hidden; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+}
+
+.container {
+	/* background-color: #0056b3; */
+	/* background-color: red; */
+	width: 100%;
+	gap: 200px;
+}
+
+.interactive-btn {
+	/* background-color: #0056b3; */
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	/* mask-position: 20px; */
+	/* margin: 90px 9px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	width: fit-content;
+	/* height: fit-content; */
 }
 
 .game-container {
-	/* max-width: 800px; */
+	max-width: 800px;
 	/* width: 100%; */
-	/* height: fit-content; */
-	/* background-color: transparent; */
-	/* margin: 0 auto; */
-	/* text-align: center; */
+	height: fit-content;
+	margin: 0 auto;
+	/* gap: 20px; */
+	text-align: center;
 }
 
 .game-title {
-	box-shadow: 0px 0px 10px red;
-	/* font-size: 2em; */
-	/* margin-bottom: 20px; */
-	/* color: #fff; */
+	font-size: 2em;
+	margin-bottom: 20px;
+	color: #fff;
 }
 
 .game-board {
-	/* display: grid; */
-	/* grid-template-columns: repeat(4, 1fr); */
-	/* gap: 10px; */
-	/* padding: 20px; */
-	/* background-color: #ffffff; */
-	/* border-radius: 10px; */
-	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+	padding: 20px;
+	background-color: transparent;
+	/* background-color: #222222a1; */
+
+	border-radius: 10px;
+	box-shadow: 0 0px 10px gray;
+	/* box-shadow: 0px 0px 10px red; */
 }
 
 .card {
-	/* position: relative; */
-	/* width: 100px; */
-	/* height: 100px; */
-	/* cursor: pointer; */
-	/* perspective: 1000px; */
+	position: relative;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	perspective: 1000px;
 }
 
 .card-inner {
-	/* position: absolute; */
-	/* width: 100%; */
-	/* height: 100%; */
-	/* transition: transform 0.6s; */
-	/* transform-style: preserve-3d; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
 }
 
 .card.flipped .card-inner {
-	/* transform: rotateY(180deg); */
+	transform: rotateY(180deg);
 }
 
 .card-front,
 .card-back {
-	/* position: absolute; */
-	/* width: 100%; */
-	/* height: 100%; */
-	/* backface-visibility: hidden; */
-	/* border-radius: 10px; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
 }
 
 .card-front {
-	/* background-color: #2e3d49; */
-	/* color: white; */
-	/* display: flex; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* font-size: 2em; */
+	background-color: #2e3d49;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
 }
 
 .card-back {
-	/* background-color: #f9f9f9; */
-	/* border: 2px solid #2e3d49; */
+	background-color: #f9f9f9;
+	border: 2px solid #2e3d49;
 	/* transform: rotateY(180deg); */
-	/* display: flex; */
-	/* justify-content: center; */
-	/* align-items: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+.card-back img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .game-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 50px;
+	padding: 20px;
+	/* background-color: #2e3d49; */
 	/* margin-top: 20px; */
-	/* font-size: 1.2em; */
+	align-items: center;
+	font-size: 1.2em;
 }
 
 .restart-button {
-	/* background-color: #007bff; */
-	/* color: #fff; */
-	/* border: none; */
-	/* padding: 10px 20px; */
-	/* font-size: 1em; */
-	/* cursor: pointer; */
-	/* border-radius: 5px; */
-	/* margin-top: 10px; */
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-top: 10px;
 }
 
 .restart-button:hover {
-	/* background-color: #0056b3; */
+	background-color: #0056b3;
 }

@@ -1,5 +1,4 @@
-// script.js
-
+// Default card array
 document.addEventListener('DOMContentLoaded', () => {
 	const cardArray = [
 		{ name: 'A', img: 'images/A.png' },
@@ -120,3 +119,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Initialize game
 	createBoard();
 });
+
+
+function dashboardbtn() {
+	var tooltip1 = document.getElementById('tooltip1')
+	var tooltip2 = document.getElementById('tooltip2')
+	var tooltip3 = document.getElementById('tooltip3')
+	var tooltip4 = document.getElementById('tooltip4')
+	var tooltip5 = document.getElementById('tooltip5')
+
+	if (tooltip1.style.visibility == 'hidden') {
+		document.getElementById('tooltip1').style.visibility = 'visible';
+	} else if(tooltip1.style.visibility !== 'hidden') {
+		document.getElementById('tooltip1').style.visibility = 'hidden'
+	};
+	if (tooltip2.style.visibility == 'hidden') {
+		document.getElementById('tooltip2').style.visibility = 'visible';
+	} else if(tooltip2.style.visibility !== 'hidden') {
+		document.getElementById('tooltip2').style.visibility = 'hidden'
+	};
+	if (tooltip3.style.visibility == 'hidden') {
+		document.getElementById('tooltip3').style.visibility = 'visible';
+	} else if(tooltip3.style.visibility !== 'hidden') {
+		document.getElementById('tooltip3').style.visibility = 'hidden'
+	};
+	if (tooltip4.style.visibility == 'hidden') {
+		document.getElementById('tooltip4').style.visibility = 'visible';
+	} else if(tooltip4.style.visibility !== 'hidden') {
+		document.getElementById('tooltip4').style.visibility = 'hidden'
+	};
+	if (tooltip5.style.visibility == 'hidden') {
+		document.getElementById('tooltip5').style.visibility = 'visible';
+	} else if(tooltip5.style.visibility !== 'hidden') {
+		document.getElementById('tooltip5').style.visibility = 'hidden'
+	};
+}
+
