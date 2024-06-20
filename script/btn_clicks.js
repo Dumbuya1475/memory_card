@@ -48,39 +48,3 @@ function togglePopUp() {
 	document.getElementById('popUp').style.visibility = 'visible'
 }
 
-// JavaScript for controlling the background music
-const gameMusic = document.getElementById('gameMusic');
-
-// Optional: You can control the music with JavaScript
-// For example, mute/unmute or change volume
-function toggleMute() {
-	gameMusic.muted = !gameMusic.muted;
-}
-
-// Optional: Example of adjusting volume
-function setVolume(volume) {
-	gameMusic.volume = volume; // volume should be between 0 and 1
-}
-
-
-const muteButton = document.getElementById('muteButton');
-const fullButton = document.getElementById('fullButton');
-
-muteButton.addEventListener('click', toggleMute);
-fullButton.addEventListener('click', toggleMute);  // Use toggleMute for both, as it will handle the visibility
-
-function toggleMute() {
-	if (gameMusic.muted) {
-		gameMusic.muted = false;
-		fullButton.style.opacity = '0';
-		fullButton.style.pointerEvents = 'none';
-		muteButton.style.opacity = '1';
-		muteButton.style.pointerEvents = 'auto';
-	} else {
-		gameMusic.muted = true;
-		muteButton.style.opacity = '0';
-		muteButton.style.pointerEvents = 'none';
-		fullButton.style.opacity = '1';
-		fullButton.style.pointerEvents = 'auto';
-	}
-}

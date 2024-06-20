@@ -1,6 +1,6 @@
 # Memory Card Game
 
-![Another Screenshot](assets/images/1.png)
+![Another Screenshot](assets/images/Screenshot1.png)
 
 ## 📝 Table of Contents
 

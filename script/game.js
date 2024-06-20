@@ -161,14 +161,14 @@ document.addEventListener('DOMContentLoaded', () => {
 			case 'embeddedImages':
 				// embedded images are images that are already in the assets folder
 				array = [
-					{ name: '1', img: '/assets/card_assets/img1.jpg' }, { name: '1', img: '/assets/card_assets/img1.jpg' },
-					{ name: '2', img: '/assets/card_images/img2.jpg' }, { name: '2', img: '/assets/card_images/img2.jpg' },
-					{ name: '3', img: '/assets/card_images/img3.jpg' }, { name: '3', img: '/assets/card_images/img3.jpg' },
-					{ name: '4', img: '/assets/card_images/img4.jpg' }, { name: '4', img: '/assets/card_images/img4.jpg' },
-					{ name: '5', img: '/assets/card_images/img5.jpg' }, { name: '5', img: '/assets/card_images/img5.jpg' },
-					{ name: '6', img: '/assets/card_images/img6.jpg' }, { name: '6', img: '/assets/card_images/img6.jpg' },
-					{ name: '7', img: '/assets/card_images/img7.jpg' }, { name: '7', img: '/assets/card_images/img7.jpg' },
-					{ name: '8', img: '/assets/card_images/img8.jpg' }, { name: '8', img: '/assets/card_images/img8.jpg' }
+					{ name: '1', img: './assets/card_assets/img1.jpg' }, { name: '1', img: './assets/card_assets/img1.jpg' },
+					{ name: '2', img: './assets/card_images/img2.jpg' }, { name: '2', img: './assets/card_images/img2.jpg' },
+					{ name: '3', img: './assets/card_images/img3.jpg' }, { name: '3', img: './assets/card_images/img3.jpg' },
+					{ name: '4', img: './assets/card_images/img4.jpg' }, { name: '4', img: './assets/card_images/img4.jpg' },
+					{ name: '5', img: './assets/card_images/img5.jpg' }, { name: '5', img: './assets/card_images/img5.jpg' },
+					{ name: '6', img: './assets/card_images/img6.jpg' }, { name: '6', img: './assets/card_images/img6.jpg' },
+					{ name: '7', img: './assets/card_images/img7.jpg' }, { name: '7', img: './assets/card_images/img7.jpg' },
+					{ name: '8', img: './assets/card_images/img8.jpg' }, { name: '8', img: './assets/card_images/img8.jpg' }
 				];
 				break;
 

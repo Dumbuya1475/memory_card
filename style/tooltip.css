@@ -97,19 +97,21 @@ span:hover i {
 }
 
 
-.tooltip-container .tooltip1 p {
+.tooltip-container #tooltip2 p {
+	top: 0;
+}
+
+.tooltip-container #volume button p {
 	bottom: 0;
 }
 
-.tooltip-container .tooltip2 p {
-	top: 0;
+#volume .tooltip2 p {
+	bottom: 0;
 }
 
 .tooltip-container .tooltip1 p,
 .tooltip-container .tooltip2 p {
-	/* top: 0; */
 	left: -65px;
-	/* bottom: 0; */
 }
 
 .tooltip-container .tooltip3 p {
@@ -120,6 +122,21 @@ span:hover i {
 .tooltip-container .tooltip4 p,
 .tooltip-container .tooltip5 p {
 	left: -35px;
+}
+
+
+#volume {
+	left: 50%;
+	top: 160%;
+	opacity: 1;
+	border-radius: 50px;
+	transform: translate(-50%, -5px);
+	position: absolute;
+}
+
+#volume .tooltip2 {
+	transform: translateX(-50%);
+	transform: translate(-50%, -5px);
 }
 
 /* tooltip1 [mute] */
@@ -152,6 +169,9 @@ span:hover i {
 	background: #0462df;
 }
 
+.tooltip-container #volume #unmuteButton:hover p {
+	color: #0462df;
+}
 .tooltip-container .tooltip2:hover p {
 	color: #0462df;
 }

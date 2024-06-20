@@ -73,18 +73,28 @@
           <button class="text" id="" onclick="dashboardbtn()">
             <i class='bx bxs-dashboard' id="tooltip"></i>
           </button>
-          <!-- setting btn -->
-          <button class="tooltip1" id="tooltip1" onclick="toggleMute()">
-            <!-- <i class='bx bxs-volume-full' id="fullButton"></i> -->
-            <i class='bx bxs-volume-mute' id="muteButton"></i>
-            <p>Volume off</p>
+
+          <!-- leaders board btn -->
+          <button class="tooltip2" id="tooltip2">
+            <i class='bx bxs-objects-vertical-bottom'></i>
+            <p>Leaders</p>
           </button>
-          <!-- mute btn -->
-          <button class="tooltip2" id="tooltip2" onclick="toggleMute()">
-            <i class='bx bxs-volume-full' id="fullButton"></i>
-            <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
-            <p>Volume on</p>
-          </button>
+
+          <!-- mute/unmbte btn -->
+          <div id="volume">
+            <button class="tooltip1" id="muteButton" class="tooltip1">
+              <!-- <i class='bx bxs-volume-full' id="fullButton"></i> -->
+              <i class='bx bxs-volume-mute'></i>
+              <p>Volume off</p>
+            </button>
+            <!-- mute btn -->
+            <button class="tooltip2" id="unmuteButton" onclick="toggleMute()">
+              <i class='bx bxs-volume-full'></i>
+              <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
+              <p>Volume on</p>
+            </button>
+          </div>
+
           <!-- game mode btn -->
           <button class="tooltip3" id="tooltip3" onclick="togglePopUp()">
             <i class='bx bxs-customize' id="togglePopUp"></i>
@@ -142,8 +152,12 @@
     </div>
   </section>
 
-  <audio id="gameMusic" src="assets/sound/bensound-sunwave.mp3" loop></audio>
+  <!-- Audio element for background music -->
+  <audio id="gameMusic" src="assets/sound/bensound-sunwave.mp3" autoplay loop muted></audio>
 
+  <script>
+
+  </script>
   <script src="script/bg_music.js"></script>
   <script src="script/btn_clicks.js"></script>
   <script src="script/game.js"></script>
