@@ -1,0 +1,206 @@
+.tooltip-container {
+	background: rgb(3, 169, 244);
+	background: linear-gradient(138deg,
+			rgba(3, 169, 244, 1) 15%,
+			rgba(63, 180, 233, 1) 65%);
+	position: relative;
+	cursor: pointer;
+	font-size: 17px;
+	padding: 0.7em 0.7em;
+	border-radius: 50px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+i {
+	font-size: 1.5rem;
+	margin: 2px;
+	transition: 0.3s ease;
+}
+
+span {
+	margin: 5px;
+}
+
+button {
+	margin: 5px;
+}
+
+button:hover i,
+span:hover i {
+	transform: scale(1.2);
+}
+
+.tooltip-container {
+	background: #fff;
+	transition: all 0.6s;
+}
+
+.tooltip-container .text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: #fff;
+	transition: all 0.2s;
+}
+
+.tooltip-container .text {
+	fill: rgb(3, 169, 244);
+	transition: all 0.6s;
+}
+
+.tooltip-container .tooltip1,
+.tooltip-container .tooltip2,
+.tooltip-container .tooltip3,
+.tooltip-container .tooltip4,
+.tooltip-container .tooltip5 {
+	position: absolute;
+	opacity: 1;
+	background: transparent;
+	border-radius: 50px;
+	padding: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+	z-index: 1;
+	visibility: hidden;
+	visibility: visible;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tooltip-container .tooltip1:hover i,
+.tooltip-container .tooltip2:hover i,
+.tooltip-container .tooltip3:hover i,
+.tooltip-container .tooltip4:hover i,
+.tooltip-container .tooltip5:hover i {
+	color: #fff;
+	/* color: red; */
+}
+
+.tooltip-container .tooltip1 p,
+.tooltip-container .tooltip2 p,
+.tooltip-container .tooltip3 p,
+.tooltip-container .tooltip4 p,
+.tooltip-container .tooltip5 p {
+	color: gray;
+	font-size: small;
+	position: absolute;
+	width: max-content;
+}
+
+.tooltip-container .tooltip1 i,
+.tooltip-container .tooltip2 i,
+.tooltip-container .tooltip3 i,
+.tooltip-container .tooltip4 i,
+.tooltip-container .tooltip5 i {
+	color: gray;
+}
+
+
+.tooltip-container .tooltip1 p {
+	bottom: 0;
+}
+
+.tooltip-container .tooltip2 p {
+	top: 0;
+}
+
+.tooltip-container .tooltip1 p,
+.tooltip-container .tooltip2 p {
+	/* top: 0; */
+	left: -65px;
+	/* bottom: 0; */
+}
+
+.tooltip-container .tooltip3 p {
+	left: -75px;
+}
+
+/* tooltip-4&5 */
+.tooltip-container .tooltip4 p,
+.tooltip-container .tooltip5 p {
+	left: -35px;
+}
+
+/* tooltip1 [mute] */
+.tooltip-container .tooltip1 {
+	left: 50%;
+	transform: translateX(-50%);
+	top: 150%;
+	opacity: 1;
+	border-radius: 50px;
+	transform: translate(-50%, -5px);
+}
+
+.tooltip-container .tooltip1:hover {
+	background: #03a9f4;
+}
+
+.tooltip-container .tooltip1:hover p {
+	color: #03a9f4;
+}
+
+/* tooltip2 [unmute] */
+.tooltip-container .tooltip2 {
+	left: 50%;
+	top: -120%;
+	transform: translateX(-50%);
+	transform: translate(-50%, -5px);
+}
+
+.tooltip-container .tooltip2:hover {
+	background: #0462df;
+}
+
+.tooltip-container .tooltip2:hover p {
+	color: #0462df;
+}
+
+/* tooltip3 [game mode]  */
+.tooltip-container .tooltip3 {
+	top: 10%;
+	left: -200%;
+	transform: translateX(80%);
+	transform: translate(85%, -5px);
+}
+
+.tooltip-container .tooltip3:hover {
+	background: #1db954;
+}
+
+.tooltip-container .tooltip3:hover p {
+	color: #1db954;
+}
+
+/* tooltip4 [light theme] */
+.tooltip-container .tooltip4 {
+	top: 100%;
+	left: -150%;
+	transform: translateX(100%);
+	transform: translate(70%, -5px);
+}
+
+.tooltip-container .tooltip4:hover {
+	background: #8c9eff;
+}
+
+.tooltip-container .tooltip4:hover p {
+	color: #8c9eff;
+}
+
+/* tooltip5 [dark theme] */
+.tooltip-container .tooltip5 {
+	top: -78%;
+	left: -140%;
+	transform: translateX(70%);
+	transform: translate(70%, -5px);
+}
+
+.tooltip-container .tooltip5:hover {
+	background: #bd081c;
+	fill: #fff;
+}
+
+.tooltip-container .tooltip5:hover p {
+	color: #bd081c;
+}
