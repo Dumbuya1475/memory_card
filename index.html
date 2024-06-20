@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing page</title>
   <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="animation.css"> -->
 
   <!-- external link for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,12 +30,7 @@
     </header>
     <div class="hero-body">
       <div class="img-box card">
-        <!-- <div class="view card-front"> -->
-        <!-- <img src="./assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="question-icon" /> -->
-        <!-- </div> -->
-        <div class="view card-back" data-aos="flip-left" data-aos-offset="300" data-aos-duration="3000">
-          <img src="assets/images/double.png" alt="">
-        </div>
+        <img src="assets/images/double.png" alt="">
       </div>
       <div class="hero-text">
         <p data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">Test your memory skills!</p>
@@ -103,42 +97,7 @@
 
   </main>
 
-  <script>
-    "use strict";
-
-    // Selecting Elements
-    const cards = document.querySelectorAll(".card");
-
-    // Required Variables
-    let maxTime = 25;
-    let timeLeft = maxTime;
-    let flips = 0;
-    let matchedCard = 0;
-    let disableDeck = false;
-    let isPlaying = false;
-    let card1, card2, timer;
-
-    // Function FlipCard
-    function flipCard({ target: clickedCard }) {
-      if (!isPlaying) {
-        isPlaying = true;
-        timer = setInterval(initialTimer, 1000);
-      }
-      if (clickedCard !== card1 && !disableDeck && timeLeft > 0) {
-        flips++;
-        flipsTag.innerText = flips;
-        clickedCard.classList.add("flip");
-        if (!card1) {
-          return (card1 = clickedCard);
-        }
-        card2 = clickedCard;
-        disableDeck = true;
-        let card1Img = card1.querySelector(".back-view img").src,
-          card2Img = card2.querySelector(".back-view img").src;
-        matchCard(card1Img, card2Img);
-      }
-    }
-  </script>
+  <!-- this is an external js script for the animation function [index.html] -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();

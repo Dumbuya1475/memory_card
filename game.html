@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Card Game</title>
-
   <!-- game style link -->
   <link rel="stylesheet" href="game.css">
   <link rel="stylesheet" href="tooltip.css">
-
   <!-- Box icons link -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,53 +16,90 @@
   <section class="game-container">
     <h1 class="game-title">Memory Card Game</h1>
     <div class="container">
+      <div class="sub-container">
+        <div class="interactive-btns-1">
+          <div class="tooltip-container-1">
 
-      <div class="side-panel">
-        <button>Hello</button>
+            <!-- dashboard btn -->
+            <h3>Leaders Score Board</h3>
+            <div class="leaders-board">
+              <ul>
+                <li>Mohamed <span>6 Moves</span></li>
+              </ul>
+            </div>
+            <span class="text" id="" onclick="gameMood()">
+              <!-- <i class='bx bxs-customize' id="tooltip"></i> -->
+            </span>
+            <!-- setting btn -->
+            <span class="tooltip1">
+              <p>Number Mode</p>
+            </span>
+            <!-- score board btn -->
+            <span class="tooltip2" id="">
+              <p>Picture Mode</p>
+              <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
+            </span>
+            <!-- dark mode btn -->
+            <span class="tooltip3" id="">
+              <i class='bx bxs-moon'></i>
+            </span>
+            <!-- light mode btn -->
+            <span class="tooltip4" id="">
+              <i class='bx bxs-sun'></i>
+            </span>
+            <!-- img input btn -->
+            <span class="tooltip5" id="">
+              <i class='bx bxs-image-add'></i>
+            </span>
+          </div>
+        </div>
       </div>
-
       <div class="game-board-container">
         <div class="game-board" id="gameBoard">
           <!-- Cards will be dynamically generated here by the game.js -->
         </div>
         <div class="game-info">
           <p>Moves: <span id="movesCount">0</span></p>
-          <button class="restart-button" id="restartButton">Restart Game</button>
+          <button class="restart-button" id="restartButton">
+            Restart Game
+            <i class="bx bx-sync"></i>
+          </button>
         </div>
       </div>
 
-      <div class="interactive-btn">
+      <div class="interactive-btns-2">
         <div class="tooltip-container">
-
           <!-- dashboard btn -->
-          <span class="text" id="" onclick="dashboardbtn()">
+          <button class="text" id="" onclick="dashboardbtn()">
             <i class='bx bxs-dashboard' id="tooltip"></i>
-          </span>
-
+          </button>
           <!-- setting btn -->
-          <span class="tooltip1" id="tooltip1">
-            <i class='bx bxs-cog'></i> </span>
-
-          <!-- score board btn -->
-          <span class="tooltip2" id="tooltip2">
-            <i class='bx bxs-objects-vertical-bottom'></i>
-          </span>
-
-          <!-- dark mood btn -->
-          <span class="tooltip3" id="tooltip3">
-            <i class='bx bxs-moon'></i>
-          </span>
-
-          <!-- light mood btn -->
-          <span class="tooltip4" id="tooltip4">
+          <button class="tooltip1" id="tooltip1" onclick="toggleMute()">
+            <!-- <i class='bx bxs-volume-full' id="fullButton"></i> -->
+            <i class='bx bxs-volume-mute' id="muteButton"></i>
+            <p>Volume off</p>
+          </button>
+          <!-- mute btn -->
+          <button class="tooltip2" id="tooltip2" onclick="toggleMute()">
+            <i class='bx bxs-volume-full' id="fullButton"></i>
+            <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
+            <p>Volume on</p>
+          </button>
+          <!-- game mode btn -->
+          <button class="tooltip3" id="tooltip3" onclick="togglePopUp()">
+            <i class='bx bxs-customize' id="togglePopUp"></i>
+            <p>Game mode</p>
+          </button>
+          <!-- light mode btn -->
+          <button class="tooltip4" id="tooltip4">
             <i class='bx bxs-sun'></i>
-          </span>
-
-          <!-- img input btn -->
-          <span class="tooltip5" id="tooltip5" onclick="togglePopUp()">
-            <i class='bx bxs-image-add' id="togglePopUp"></i>
-          </span>
-
+            <p>Light</p>
+          </button>
+          <!-- dark mode btn -->
+          <button class="tooltip5" id="tooltip5" onclick="togglePopUp()">
+            <i class='bx bxs-moon'></i>
+            <p>Dark</p>
+          </button>
         </div>
       </div>
     </div>
@@ -72,95 +107,43 @@
 
   <section class="pop-up-container" id="popUp">
     <div class="container">
-      <img src="assets/images/WhatsApp Image 2024-05-24 at 11.11.11_53ec5968.jpg" alt="" width="150">
+      <div class="controls">
 
-      <div class="upload-section">
-        <p>Upload beautiful images of your for the game cards:</p>
-        <p>Note: <span>Amount of images must be in odd number (eg: 2, 4, 6, 8, 10)</span></p>
+        <img src="assets/images/double.png" alt="" width="150">
+        <p id="heading">Select Game Mode</p>
+        <!-- buttons in popup container -->
+        <button id="startGameWithAlphabet">Play Game with Alphabet</button>
+        <button id="startGameWithNumbers">Play Game with Numbers</button>
+        <button id="startGameWithImages">Play Game with Your Own Images</button>
+        <button id="startGameWithEmbeddedImages">Play Game with Embedded Images</button>
+        <!-- <button id="startGameWithRandomImages">Play Game with Randomly Generated Images</button> -->
+      </div>
 
-        <div class="select-img-box">
-          <div class="upload-btn" id="uploadIcon">
-            <p>Select images</p>
-            <i class='bx bxs-image-add'></i>
-          </div>
-
-          <div class="save-btn" id="saveBtn">
-            <p>Upload and save</p>
-            <i class='bx bxs-image-add' id="uploadIcon"></i>
-            </label>
-          </div>
+      <div class="upload-section" style="display: none;">
+        <p>Upload beautiful images for the game cards:</p>
+        <p>Note: <span>Number of images must be even (e.g., 2, 4, 6, 8, 10)</span></p>
+        <input type="file" id="imageUpload" multiple accept="image/*" style="display: none;">
+        <div class="select-img-box" id="uploadIcon">
+          <p>Select images</p>
+          <i class='bx bxs-image-add'></i>
         </div>
-
-        <div class="upload-and-save">
-        </div>
-        <div id="uploadPopup" class="hidden">
-          <!-- <div class="popup-content"> -->
-          <!-- <p>Select Images</p> -->
-          <!-- <div id="selectedImages"></div> -->
-          <button id="closePopup" onclick="closePopUp()">
-            <p>X</p>
-            <!-- <i class="bx bx-sync">X</i> -->
-          </button>
+        <div class="save-btn" id="saveBtn">
+          <p>Upload and save</p>
+          <i class='bx bxs-image-add'></i>
         </div>
       </div>
+
+      <div id="uploadPopup">
+        <button id="closePopup" onclick="closePopUp()">
+          <p>X</p>
+          <!-- <i class="bx bx-sync">X</i> -->
+        </button>
+      </div>
     </div>
-    </div>
-    <!-- <label for="fileInput"> -->
-    <!-- <i class='bx bxs-image-add' id="uploadIcon"></i> -->
-    <!-- </label> -->
   </section>
 
-  <script src="game.js"></script>
-  <script>
-    const uploadIcon = document.getElementById('uploadIcon');
-    const fileInput = document.getElementById('fileInput');
-    const selectedImage = document.getElementById('selectedImage'); // For preview (optional)
-    const uploadPopup = document.getElementById('uploadPopup');
-    const closePopupButton = document.getElementById('closePopup');
-
-    uploadIcon.addEventListener('click', () => {
-      uploadPopup.classList.remove('hidden'); // Make the pop-up visible
-      fileInput.click(); // Simulate a click on the hidden file input
-    });
-
-    closePopupButton.addEventListener('click', () => {
-      uploadPopup.classList.add('hidden'); // Hide the pop-up
-    });
-
-    imageInput.addEventListener('change', (event) => {
-      // ... existing code to handle selected images ... (unchanged)
-
-      if (selectedImage) { // Update image preview section (optional)
-        // Update the content of the #selectedImages element based on selected files
-      }
-    });
-
-
-    // const selectImageButton = document.getElementById('uploadIcon'); // Change to the actual icon ID
-    // const imageInput = document.getElementById('imageInput');
-    // const selectedImage = document.getElementById('selectedImage'); // Assuming you have an image preview section
-
-    // selectImageButton.addEventListener('click', () => {
-    //   imageInput.click(); // Simulate a click on the hidden file input
-    // });
-
-    // imageInput.addEventListener('change', (event) => {
-    //   const selectedFile = event.target.files[0];  // Get the first selected file
-
-    //   if (selectedFile) {
-    //     const reader = new FileReader();  // Create a FileReader object
-
-    //     reader.onload = function (e) {
-    //       selectedImage.src = e.target.result;  // Set the image source to the file data URL
-    //       selectedImage.style.display = 'block';  // Make the image visible
-    //     };
-
-    //     reader.readAsDataURL(selectedFile);  // Read the selected file as a data URL
-    //   }
-    // });
-
-  </script>
-  <script src="btn_clicks.js"></script>
+  <script src="script/btn_clicks.js"></script>
+  <script src="script/game.js"></script>
 </body>
 
 </html>
