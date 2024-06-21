@@ -1,0 +1,19 @@
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  /* Your CSS styles for mobile devices here */
+  h1 { font-size: 1.5rem; } /* Example mobile heading size */
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Your CSS styles for tablet devices here */
+  body { padding: 1em; } /* Example tablet padding */
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  /* Your CSS styles for desktop devices here */
+  .main-content { width: 70%; } /* Example desktop content width */
+}
+
