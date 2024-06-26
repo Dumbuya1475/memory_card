@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memory Grid Game</title>
+	<link rel="stylesheet" href="style/game1.css">
+	<link rel="stylesheet" href="style/game.css">
+	<link rel="stylesheet" href="style/tooltip.css">
+
+	<!-- Box icons link -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+	<section class="game-container">
+		<h1 class="game-title">Memory Card Game</h1>
+		<div class="container">
+			<div class="sub-container">
+				<div class="interactive-btns-1" style="display: none;">
+					<div class="tooltip-container-1">
+
+						<!-- dashboard btn -->
+						<h3>Leaders Score Board</h3>
+						<div class="leaders-board">
+							<ul>
+								<li>Mohamed <span>6 Moves</span></li>
+								<li>Mohamed <span>6 Moves</span></li>
+								<li>Mohamed <span>6 Moves</span></li>
+								<li>Mohamed <span>6 Moves</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="game-board-container">
+			<div id="gridContainer" class="grid-container">
+				<!-- Cards will be dynamically generated here by the game.js -->
+			</div>
+			<div class="game-info">
+				<button id="startGameButton">Start Game</button>
+				</button>
+			</div>
+		</div>
+
+		<div class="interactive-btns-2">
+			<div class="tooltip-container">
+
+				<!-- dashboard btn -->
+				<button class="text" id="" onclick="dashboardbtn()">
+					<i class='bx bxs-dashboard' id="tooltip"></i>
+				</button>
+
+				<!-- leaders board btn -->
+				<button class="tooltip2" id="tooltip2">
+					<i class='bx bxs-objects-vertical-bottom'></i>
+					<p>Leaders</p>
+				</button>
+
+				<!-- mute/unmbte btn -->
+				<div id="volume">
+					<button class="tooltip1" id="muteButton" class="tooltip1">
+						<!-- <i class='bx bxs-volume-full' id="fullButton"></i> -->
+						<i class='bx bxs-volume-mute'></i>
+						<p>Volume off</p>
+					</button>
+					<!-- mute btn -->
+					<button class="tooltip2" id="unmuteButton" onclick="toggleMute()">
+						<i class='bx bxs-volume-full'></i>
+						<!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
+						<p>Volume on</p>
+					</button>
+				</div>
+
+				<!-- game mode btn -->
+				<button class="tooltip3" id="tooltip3" onclick="togglePopUp()">
+					<i class='bx bxs-customize' id="togglePopUp"></i>
+					<p>Game mode</p>
+				</button>
+
+				<!-- light mode btn -->
+				<button class="tooltip4" id="tooltip4">
+					<i class='bx bxs-sun'></i>
+					<p>Light</p>
+				</button>
+
+				<!-- dark mode btn -->
+				<button class="tooltip5" id="tooltip5" onclick="togglePopUp()">
+					<i class='bx bxs-moon'></i>
+					<p>Dark</p>
+				</button>
+			</div>
+		</div>
+
+		<div class="tooltip2-filter">
+		</div>
+	</section>
+
+	<script src="script/game1.js"></script>
+	<script src="script/btn_clicks.js"></script>
+	<script src="script/bg_music.js"></script>
+</body>
+
+</html>

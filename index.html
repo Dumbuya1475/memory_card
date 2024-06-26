@@ -7,103 +7,192 @@
   <title>Landing page</title>
   <link rel="icon" href="assets/images/title_img.png">
   <link rel="stylesheet" href="style/style.css">
-<link rel="stylesheet" href="style/media.css">
-  <!-- external link for animations -->
+  <link rel="stylesheet" href="style/media.css">
+
+  <!-- Box icons link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- External link for animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+  </style>
 </head>
 
 <body>
   <section class="hero" id="hero">
+    <div class="open-sidebar">
+
+
+      <div class="sidebar">
+        <div class="side-bar-heading">
+          <a class="logo" style="color: white; font-size: 2rem;">MindMatch</a>
+
+          <button class="sidebar-toggle" id="toggleMenu" onclick="toggleSidebar()">
+            x
+            <i class="bx bxs-close"></i>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+
     <header>
-      <div class="logo">Memory Card</div>
+      <div class="logo">MindMatch</div>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#about" target="_top">About</a></li>
-          <li><a href="#howToPlay" target="_top">How to play</a></>
+          <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="#games">Games</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li id="cta-btn"><a href="game.html">Play <span>Now!</span></a></li>
-          <!-- <li><a href="">Sign Up</a></li> -->
-          <!-- <li><a href="">Login</a></li> -->
+          <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button class="sidebar-toggle" onclick="toggleSidebar()" id="toggleMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
     <div class="hero-body">
-      <div class="img-box card">
-        <img src="assets/images/double.png" alt="">
-      </div>
       <div class="hero-text">
-        <p data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">Test your memory skills!</p>
-        <h1 data-aos="fade-left" data-aos-offset="300" data-aos-duration="2500">Match the pairs to win</h1>
-        <p data-aos="fade-left" data-aos-offset="200" data-aos-duration="2000">A fun and challenging game for
-          all ages.</p>
+
+        <div class="hero-text">
+          <p data-aos="fade-right" data-aos-offset="200" data-aos-duration="1500">Test your memory skills with Memory
+            Mastery!</p>
+          <h1 data-aos="fade-left" data-aos-offset="200" data-aos-duration="1500">Explore and Excel in Our Memory Games
+          </h1>
+          <p data-aos="fade-right" data-aos-offset="100" data-aos-duration="1500">Dive into fun and challenging games
+            designed to boost your memory and cognitive skills.</p>
+          <div class="cta-button" data-aos="fade" data-aos-offset="200" data-aos-duration="2000">
+            <a href="#">Play Our Game </a>
+            <span>&UpArrow;</span>
+            <!-- <a href="game.html" class="cta-button">Play Memory Card Game</a> -->
+            <!-- <a href="memorize-the-path-game.html" class="cta-button">Play Memorize the Path Game</a> -->
+          </div>
+        </div>
       </div>
-    </div>
   </section>
 
   <main>
     <section class="about" id="about">
-      <div class="img-box" data-aos="flip-right" data-aos-offset="300" data-aos-duration="1500">
+      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
         <img src="assets/images/single-2.png" alt="about-img">
       </div>
-      <div class="about-text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
-        <h2>About the game</h2>
+      <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+        <h2>About</h2>
         <p>
           Welcome to the Memory Card Game! Match the pairs and complete the game in the shortest time
-          possible. Challenge yourself with different levels and themes. Click the button below to start
-          playing!
+          possible. Challenge yourself with different levels and themes.
         </p>
-        <a href="game.html" class="cta-button">Start <span>Playing</span></a>
-      </div>
-    </section>
-
-    <section class="how-to-play" id="howToPlay">
-      <div class="img-box" data-aos="flip-left" data-aos-offset="300" data-aos-duration="1500">
-        <img src="assets/images/single-1.png" alt="about-img">
-      </div>
-      <div class="tagline" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
-        <h2>How to play</h2>
-        <p>
-          Welcome to the Memory Card Game! Match the pairs and complete the game in the shortest time
-          possible. Challenge yourself with different levels and themes. Click the button below to start
-          playing!
-        </p>
-        <a href="game.html" class="cta-button">Start <span>Playing</span></a>
+        <p>Click the buttons above to start playing!</p>
       </div>
     </section>
 
     <section class="features" id="features">
-      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
-        <img src="assets/images/single-2.png" alt="">
+      <div class="img-box" data-aos-offset="300" data-aos-duration="2000">
+        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
+        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
       </div>
-      <div class="tagline" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+      <div class="tagline" id="text" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
         <h2>Features</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo porro desert neque accusamus dolor's
-          praesentium qui similique quam beatae. Necessitatibus nesciunt enid velit ipsam, veritatis cum
-          delectus
-          cupiditate magnam impedit?
+          Our different game for your memory
+          <!-- The Memory Card Game challenges your memory skills. Memorize card positions and match them in pairs. -->
         </p>
+        <!-- <p>Explore the games using the buttons in the Hero section!</p> -->
       </div>
     </section>
 
+    <section class="games" id="games">
+      <div class="img-box" data-aos="fade-right" data-aos-duration="1000">
+        <div class="img">
+          <img src="assets/images/single-2.png" alt="about-img">
+          <div class="text">
+            <h3>Memory Card</h3>
+            <p>Match different set of card to win.</p>
+            <a href="game.html">Play Now!</a>
+          </div>
+        </div>
+        <div class="img">
+          <img src="assets/images/single-2.png" alt="about-img">
+          <div class="text">
+            <h3>Path Memorizer</h3>
+            <p>Memory the card that was display.</p>
+            <a href="game1.html">Play Now!</a>
+          </div>
+        </div>
+        <div class="img">
+          <img src="assets/images/single-2.png" alt="about-img">
+          <div class="text">
+            <h3>Memory Game</h3>
+            <p>Match the card in the shortest possible time.</p>
+            <a href="">Play Now!</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="tagline" id="text" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <h2>Games</h2>
+        <p>
+          Memorize card positions and match them.
+        </p>
+        <!-- <p>Explore the games using the buttons in the Hero section!</p> -->
+      </div>
+    </section>
+
+    <section class="cta-container" id="ctaContainer">
+      <div class="container">
+        <div class="tagline" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+
+          <div id="text">
+            <p>
+              Play our mind matching game and improve your memory ability.
+            </p>
+            <p>
+              Click this button to test your brain!</p>
+          </div>
+
+          <a href="" class="cta-btn">Try Now!</a>
+        </div>
+      </div>
+    </section>
+
+    </section>
+
     <footer>
+      <div class="footer-body">
+
+      </div>
       <p>&copy; 2024 Memory Card Game. All rights reserved.</p>
       <div class="terms">
         <a href="privacy.html" style="color: #9da0a2;">Privacy Policy</a> |
         <a href="contact.html" style="color: #9da0a2;">Contact Us</a>
       </div>
     </footer>
-
   </main>
 
-  <!-- this is an external js script for the animation function [index.html] -->
+  <!-- External JavaScript for animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <!-- External javascript -->
+  <script src="script/btn_clicks.js"></script>
 </body>
 
 </html>
-

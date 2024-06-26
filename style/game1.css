@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --h1-color: #98E8CD;
+  --border-color: #98E8CD;
+  --main-bg: #020b18;
+  --second-bg: #081220;
+  --primary-color: #ccc;
+  --white-color: gray;
+  --white-color: white;
+}
+body {
+	background-color: #f0f0f0;
+	background-color: var(--main-bg);
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* height: 100vh; */
+	/* overflow: hidden; */
+	/* width: 100%; */
+}
+
+.container {
+	width: 100%;
+	gap: 200px;
+}
+
+.sub-container {
+	/* position: fixed; */
+	/* right: 0; */
+	/* top: 0; */
+	/* bottom: 0; */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	/* padding: 20px; */
+	/* width: fit-content; */
+}
+.game-board-container{
+  /* background-color: #ccc; */
+}
+
+/* Style for the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 500px;
+  /* margin: 20px auto; */
+  /* background-color: rebeccapurple; */
+  box-shadow: 0px 0px 10px var(--border-color);
+}
+
+/* Style for each grid cell */
+.grid-cell {
+  width: 80px;
+  height: 80px;
+  box-shadow: 0px 0px 5px var(--border-color);
+  background-color: var(--second-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Highlighted cell state */
+.grid-cell.active {
+  background-color: green;
+}
+
+/* Correct and incorrect feedback styles */
+.grid-cell.correct {
+  background-color: blue;
+}
+
+.grid-cell.incorrect {
+  background-color: red;
+}
+
+/* Feedback message styling */
+#feedbackMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,51 @@
+/* Mobile Styles */
+@media (max-width: 767px) {
+
+	/* Your CSS styles for mobile devices here */
+	.card {
+		position: relative;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		perspective: 1000px;
+	}
+
+	.interactive-btns-2 {
+		display: none;
+	}
+
+	.interactive-btns-1 {
+		display: none;
+
+	}
+
+	.tooltip2-filter {
+		/* background-color: aqua; */
+		display: none;
+	}
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+	/* Your CSS styles for tablet devices here */
+	.game-board {}
+
+	.card {
+		/* background-color: red; */
+		position: relative;
+		width: 100px;
+		height: 100px;
+		cursor: pointer;
+		perspective: 1000px;
+	}
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+
+	/* Your CSS styles for desktop devices here */
+	.main-content {
+		width: 70%;
+	}
+}

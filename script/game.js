@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('startGameWithNumbers').addEventListener('click', startGameWithNumbers);
 	document.getElementById('startGameWithImages').addEventListener('click', startGameWithImages);
 	document.getElementById('startGameWithEmbeddedImages').addEventListener('click', startGameWithEmbeddedImages);
-	document.getElementById('startGameWithRandomImages').addEventListener('click', startGameWithRandomImages);
 
 	// Add event listener for the restart button
 	document.getElementById('restartButton').addEventListener('click', restartGame);
@@ -93,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			firstCard.classList.remove('flipped');
 			secondCard.classList.remove('flipped');
 			resetBoard();
-		}, 1500);
+		}, 500);
 	}
 
 	// Reset board variables
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Game modes functions [Number mode]
 	function startGameWithNumbers() {
-		cardArray = generateCardArray('numbers');
+		cardArray = generateCardArray('emoji');
 		restartGame();
 	}
 
@@ -135,10 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	// Tis function is not working so I commented it out
-	  // Game modes functions [Random images mode]
+	// Game modes functions [Random images mode]
 	// function startGameWithRandomImages() {
-		// cardArray = generateCardArray('randomImages');
-		// restartGame();
+	// cardArray = generateCardArray('randomImages');
+	// restartGame();
 	// }
 
 	// Generate card array based on mode
@@ -161,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			case 'embeddedImages':
 				// embedded images are images that are already in the assets folder
 				array = [
-					{ name: '1', img: './assets/card_assets/img1.jpg' }, { name: '1', img: './assets/card_assets/img1.jpg' },
+					{ name: '1', img: 'on' }, { name: '1', img: 'on' },
 					{ name: '2', img: './assets/card_images/img2.jpg' }, { name: '2', img: './assets/card_images/img2.jpg' },
 					{ name: '3', img: './assets/card_images/img3.jpg' }, { name: '3', img: './assets/card_images/img3.jpg' },
 					{ name: '4', img: './assets/card_images/img4.jpg' }, { name: '4', img: './assets/card_images/img4.jpg' },
@@ -171,14 +170,27 @@ document.addEventListener('DOMContentLoaded', () => {
 					{ name: '8', img: './assets/card_images/img8.jpg' }, { name: '8', img: './assets/card_images/img8.jpg' }
 				];
 				break;
+			case 'emoji':
+				// Array of cards with emojis instead of images
+				array = [
+					{ name: '1', emoji: '🐶' }, { name: '1', emoji: '🐶' },
+					{ name: '2', emoji: '🐱' }, { name: '2', emoji: '🐱' },
+					{ name: '3', emoji: '🐭' }, { name: '3', emoji: '🐭' },
+					{ name: '4', emoji: '🐹' }, { name: '4', emoji: '🐹' },
+					{ name: '5', emoji: '🐰' }, { name: '5', emoji: '🐰' },
+					{ name: '6', emoji: '🦊' }, { name: '6', emoji: '🦊' },
+					{ name: '7', emoji: '🐻' }, { name: '7', emoji: '🐻' },
+					{ name: '8', emoji: '🐼' }, { name: '8', emoji: '🐼' }
+				];
+				break
 
-				// i disable this function because it is not working
+			// i disable this function because it is not working
 			// case 'randomImages':
-				// for (let i = 1; i <= 8; i++) {
-					// let imgURL = `https://placeimg.com/100/100/any?${Math.random()}`;
-					// array.push({ name: i.toString(), img: imgURL }, { name: i.toString(), img: imgURL });
-				// }
-				// break;
+			// for (let i = 1; i <= 8; i++) {
+			// let imgURL = `https://placeimg.com/100/100/any?${Math.random()}`;
+			// array.push({ name: i.toString(), img: imgURL }, { name: i.toString(), img: imgURL });
+			// }
+			// break;
 			default:
 				break;
 		}
