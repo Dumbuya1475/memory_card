@@ -216,6 +216,9 @@
   .main-content {
     width: 70%;
   }
+  .sidebar {
+  display: none;;
+}
   .sidebar-toggle span{
     display: none;
   }
