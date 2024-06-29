@@ -62,7 +62,14 @@ function togglePopUp() {
 
 
 // Function for side bar for the game page
-function toggleSidebar() {
-	document.body.classList.toggle('open-sidebar');
-	document.body.classList.toggle('closed-sidebar');
+function openPanel() {
+	document.getElementById("sidePanel").style.width = "100%";
+	document.getElementById("sidePanel").style.height = "40%";
+	document.getElementById("main-content").style.marginLeft = "0";
+}
+
+function closePanel() {
+	document.getElementById("sidePanel").style.width = "0";
+	document.getElementById("sidePanel").style.height = "0";
+	// document.getElementById("main-content").style.marginLeft = "0";
 }

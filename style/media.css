@@ -118,8 +118,12 @@
     justify-content: center;
     background-color: var(--main-bg);
     padding: 0;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
+    /* padding-bottom: 100px; */
+    background-color: aqua;
+    /* width: fit-content */
   }
+
 
   .cta-container .container {
     background-color: var(--second-bg);
@@ -216,10 +220,13 @@
   .main-content {
     width: 70%;
   }
+
   .sidebar {
-  display: none;;
-}
-  .sidebar-toggle span{
+    display: none;
+    ;
+  }
+
+  .sidebar-toggle span {
     display: none;
   }
 

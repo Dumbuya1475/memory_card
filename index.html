@@ -21,48 +21,48 @@
 
 <body>
   <section class="hero" id="hero">
-    <div class="open-sidebar">
-
-
-      <div class="sidebar">
-        <div class="side-bar-heading">
-          <a class="logo" style="color: white; font-size: 2rem;">MindMatch</a>
-
-          <button class="sidebar-toggle" id="toggleMenu" onclick="toggleSidebar()">
-            x
-            <i class="bx bxs-close"></i>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-        </div>
-        <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div>
+    <div id="sidePanel" class="side-panel">
+      <div class="sideBar-heading">
+        <div class="logo">MemoryCard</div>
+        <button href="javascript:void(0)" class="close-btn" onclick="closePanel()">&times;</button>
       </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <a href="signUp.html">Signup</a>
+        <a href="login.html">Login</a>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
 
     <header>
-      <div class="logo">MindMatch</div>
+      <div class="logo">MemoryCard</div>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#games">Games</a></li>
           <li><a href="#blog">Blog</a></li>
+          <a href="signUp.html">Signup</a>
+          <a href="login.html">Login</a>
           <li><a href="#contact">Contact</a></li>
+          <div class="profile">
+            <div class="img-box">
+              <!-- <img src="assets/card_images/paris-bilal-SGHgGAJpdl4-unsplash.jpg" alt=""> -->
+            </div>
+          </div>
         </ul>
 
-        <button class="sidebar-toggle" onclick="toggleSidebar()" id="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <ul>
+          <!-- <button class="sidebar-toggle" id="open-btn" onclick="openPanel()"> -->
+          <button class="sidebar-toggle" id="open-btn" onclick="openPanel()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </ul>
       </nav>
     </header>
     <div class="hero-body">
@@ -86,9 +86,9 @@
   </section>
 
   <main>
-    <section class="about" id="about">
+    <section class="about" id="container">
       <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
-        <img src="assets/images/single-2.png" alt="about-img">
+        <!-- <img src="assets/images/img.png" alt="about-img"> -->
       </div>
       <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
         <h2>About</h2>
@@ -96,16 +96,68 @@
           Welcome to the Memory Card Game! Match the pairs and complete the game in the shortest time
           possible. Challenge yourself with different levels and themes.
         </p>
-        <p>Click the buttons above to start playing!</p>
+        <!-- <p>Click the buttons above to start playing!</p> -->
+      </div>
+    </section>
+
+    <section class="about" id="container">
+      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <img src="assets/images/img.png" alt="about-img">
+      </div>
+      <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+        <h2>Play in a fun way with our different game mode and levels</h2>
+        <p>
+          Our games come with different game modes and levels (easy, medium, hard)
+        </p>
+        <!-- <p>Click the buttons above to start playing!</p> -->
+      </div>
+    </section>
+
+    <section class="about" id="container">
+      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <img src="assets/images/img.png" alt="about-img">
+      </div>
+      <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+        <h2>Challenge yourself with friends and families</h2>
+        <p>
+          See how fast you can remember letters, numbers, objects, and pictures
+        </p>
+        <!-- <p>Click the buttons above to start playing!</p> -->
+      </div>
+    </section>
+
+    <section class="about" id="container">
+      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <img src="assets/images/img.png" alt="about-img">
+      </div>
+      <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+        <h2>Track your progress</h2>
+        <p>
+          With our leaders score board you will be able to see your past attempt and see how you are improving
+        </p>
+        <!-- <p>Click the buttons above to start playing!</p> -->
+      </div>
+    </section>
+
+    <section class="about" id="container">
+      <div class="img-box" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <img src="assets/images/img.png" alt="about-img">
+      </div>
+      <div class="about-text" id="text" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1500">
+        <h2>Tips and advice for improving you mental health</h2>
+        <p>
+          We often provide feeds on how you can improve your mental health
+        </p>
+        <!-- <p>Click the buttons above to start playing!</p> -->
       </div>
     </section>
 
     <section class="features" id="features">
       <div class="img-box" data-aos-offset="300" data-aos-duration="2000">
-        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
-        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
-        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
-        <img src="assets/images/title_img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
+        <img src="assets/images/img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/images/img.png" alt="about-img" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/images/img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
+        <img src="assets/images/img.png" alt="about-img" data-aos="fade-left" data-aos-duration="1000">
       </div>
       <div class="tagline" id="text" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
         <h2>Features</h2>
@@ -120,7 +172,7 @@
     <section class="games" id="games">
       <div class="img-box" data-aos="fade-right" data-aos-duration="1000">
         <div class="img">
-          <img src="assets/images/single-2.png" alt="about-img">
+          <img src="assets/images/img.png" alt="about-img">
           <div class="text">
             <h3>Memory Card</h3>
             <p>Match different set of card to win.</p>
@@ -128,7 +180,7 @@
           </div>
         </div>
         <div class="img">
-          <img src="assets/images/single-2.png" alt="about-img">
+          <img src="assets/images/img.png" alt="about-img">
           <div class="text">
             <h3>Path Memorizer</h3>
             <p>Memory the card that was display.</p>
@@ -136,7 +188,7 @@
           </div>
         </div>
         <div class="img">
-          <img src="assets/images/single-2.png" alt="about-img">
+          <img src="assets/images/img.png" alt="about-img">
           <div class="text">
             <h3>Memory Game</h3>
             <p>Match the card in the shortest possible time.</p>
@@ -156,7 +208,7 @@
 
     <section class="cta-container" id="ctaContainer">
       <div class="container">
-        <div class="tagline" data-aos="fade-left" data-aos-offset="300" data-aos-duration="1500">
+        <div class="tagline">
 
           <div id="text">
             <p>

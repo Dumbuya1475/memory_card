@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+		<link rel="stylesheet" href="style/signup.css">
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-control input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-control.success input {
+            border-color: #2ecc71;
+        }
+        .form-control.error input {
+            border-color: #e74c3c;
+        }
+        .form-control small {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            visibility: hidden;
+            font-size: 12px;
+            color: #e74c3c;
+        }
+        .form-control.error small {
+            visibility: visible;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="container">
+			<form class="form" id="loginForm">
+					<h2>Login</h2>
+            <div class="form-control">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" placeholder="Enter your username">
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password">
+                <small>Error message</small>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+    <script src="script/login.js"></script>
+</body>
+</html>
