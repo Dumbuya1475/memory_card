@@ -17,23 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	}, { once: true });
 
 	// Buttons to control mute/unmute
-	const muteButton = document.getElementById('muteButton');
-	const unmuteButton = document.getElementById('unmuteButton');
+	const tooltip2 = document.getElementById('tooltip2');
+	const tooltip3 = document.getElementById('tooltip3');
 
 	// Initial button visibility
-	unmuteButton.style.visibility = 'hidden';
-	unmuteButton.style.pointerEvents = 'none';
-	muteButton.style.visibility = 'visible';
-	muteButton.style.pointerEvents = 'auto';
+	tooltip3.style.visibility = 'hidden';
+	tooltip3.style.pointerEvents = 'none';
+	tooltip2.style.visibility = 'visible';
+	tooltip2.style.pointerEvents = 'auto';
 
 	// Toggle mute/unmute
 	function toggleMute() {
 		if (gameMusic.muted) {
 			gameMusic.muted = false;
-			unmuteButton.style.visibility = 'visible';
-			unmuteButton.style.pointerEvents = 'auto';
-			muteButton.style.visibility = 'hidden';
-			muteButton.style.pointerEvents = 'none';
+			tooltip3.style.visibility = 'visible';
+			tooltip3.style.pointerEvents = 'auto';
+			tooltip2.style.visibility = 'hidden';
+			tooltip2.style.pointerEvents = 'none';
 
 			// Try to play the music after unmuting
 			if (gameMusic.paused) {
@@ -44,16 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		} else {
 			gameMusic.muted = true;
-			muteButton.style.visibility = 'visible';
-			muteButton.style.pointerEvents = 'auto';
-			unmuteButton.style.visibility = 'hidden';
-			unmuteButton.style.pointerEvents = 'none';
+			tooltip2.style.visibility = 'visible';
+			tooltip2.style.pointerEvents = 'auto';
+			tooltip3.style.visibility = 'hidden';
+			tooltip3.style.pointerEvents = 'none';
 		}
 	}
 
 	// Event listeners for buttons
-	muteButton.addEventListener('click', toggleMute);
-	unmuteButton.addEventListener('click', toggleMute);
+	tooltip2.addEventListener('click', toggleMute);
+	tooltip3.addEventListener('click', toggleMute);
 
 	// Ensure music auto-play works across browsers
 	if (gameMusic.paused) {

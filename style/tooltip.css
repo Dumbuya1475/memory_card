@@ -1,3 +1,81 @@
+:root {
+	--h1-color: #98E8CD;
+	--border-color: #98E8CD;
+	--main-bg: #020b18;
+	--second-bg: #081220;
+	--primary-color: #ccc;
+	--white-color: gray;
+	--white-color:white;
+}
+
+.interactive-btns-1 {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	width: fit-content;
+}
+
+.tooltip-container-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	text-align: left;
+}
+
+.tooltip-container-1 h3 {
+	color: var(--white-color);
+	margin-bottom: 20px;
+}
+
+.tooltip-container-1 ul li {
+	color: var(--white-color);
+	list-style: decimal;
+	list-style-position: inside;
+	margin: 10px 0;
+}
+
+.tooltip-container-1 p {
+	color: var(--white-color);
+}
+
+.interactive-btns-2 {
+	/* background-color: #0056b3; */
+	/* background: radial-gradient(at left, #0056b3 30px, transparent); */
+	/* width: 200px; */
+	position: fixed;
+	right: 0;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	/* width: 200px; */
+	z-index: 50;
+	height: 200px;
+}
+
+.tooltip2-filter{
+	background-color:transparent;
+	box-shadow: 0px 0px 5px var(--border-color);
+	position: absolute;
+	border-top-left-radius:50% ;
+	border-bottom-left-radius: 50%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+	top: 21%;
+	right: -150px;
+	width: 400px;
+	/* bottom: 40%; */
+	height: 400px;
+
+}
 .tooltip-container {
 	background: rgb(3, 169, 244);
 	background: linear-gradient(138deg,
@@ -44,7 +122,6 @@ span:hover i {
 }
 
 .tooltip-container .text {
-	fill: rgb(3, 169, 244);
 	transition: all 0.6s;
 }
 
@@ -61,7 +138,7 @@ span:hover i {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
 	z-index: 1;
-	visibility: hidden;
+	/* visibility: hidden; */
 	visibility: visible;
 	display: flex;
 	align-items: center;
@@ -172,6 +249,7 @@ span:hover i {
 .tooltip-container #volume #unmuteButton:hover p {
 	color: #0462df;
 }
+
 .tooltip-container .tooltip2:hover p {
 	color: #0462df;
 }

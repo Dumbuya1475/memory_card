@@ -10,7 +10,8 @@
   <!-- game style link -->
   <link rel="stylesheet" href="style/game.css">
   <link rel="stylesheet" href="style/tooltip.css">
-<link rel="stylesheet" href="style/media.css">
+  <!-- <link rel="stylesheet" href="style/media.css"> -->
+<link rel="stylesheet" href="style/game-media.css">
   <!-- Box icons link -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -28,32 +29,11 @@
             <div class="leaders-board">
               <ul>
                 <li>Mohamed <span>6 Moves</span></li>
+                <li>Mohamed <span>6 Moves</span></li>
+                <li>Mohamed <span>6 Moves</span></li>
+                <li>Mohamed <span>6 Moves</span></li>
               </ul>
             </div>
-            <span class="text" id="" onclick="gameMood()">
-              <!-- <i class='bx bxs-customize' id="tooltip"></i> -->
-            </span>
-            <!-- setting btn -->
-            <span class="tooltip1">
-              <p>Number Mode</p>
-            </span>
-            <!-- score board btn -->
-            <span class="tooltip2" id="">
-              <p>Picture Mode</p>
-              <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
-            </span>
-            <!-- dark mode btn -->
-            <span class="tooltip3" id="">
-              <i class='bx bxs-moon'></i>
-            </span>
-            <!-- light mode btn -->
-            <span class="tooltip4" id="">
-              <i class='bx bxs-sun'></i>
-            </span>
-            <!-- img input btn -->
-            <span class="tooltip5" id="">
-              <i class='bx bxs-image-add'></i>
-            </span>
           </div>
         </div>
       </div>
@@ -78,20 +58,20 @@
           </button>
 
           <!-- leaders board btn -->
-          <button class="tooltip2" id="tooltip2">
+          <button class="tooltip2" id="tooltip1">
             <i class='bx bxs-objects-vertical-bottom'></i>
             <p>Leaders</p>
           </button>
 
           <!-- mute/unmbte btn -->
           <div id="volume">
-            <button class="tooltip1" id="muteButton" class="tooltip1">
+            <button class="tooltip1" id="tooltip2">
               <!-- <i class='bx bxs-volume-full' id="fullButton"></i> -->
               <i class='bx bxs-volume-mute'></i>
               <p>Volume off</p>
             </button>
             <!-- mute btn -->
-            <button class="tooltip2" id="unmuteButton" onclick="toggleMute()">
+            <button class="tooltip2" id="tooltip2" onclick="toggleMute()">
               <i class='bx bxs-volume-full'></i>
               <!-- <i class='bx bxs-objects-vertical-bottom'></i> -->
               <p>Volume on</p>
@@ -116,20 +96,26 @@
         </div>
       </div>
     </div>
+    <div class="tooltip2-filter">
+    </div>
   </section>
 
   <section class="pop-up-container" id="popUp">
     <div class="container">
       <div class="controls">
 
-        <img src="assets/images/double.png" alt="" width="150">
-        <p id="heading">Select Game Mode</p>
-        <!-- buttons in popup container -->
-        <button id="startGameWithAlphabet">Play Game with Alphabet</button>
-        <button id="startGameWithNumbers">Play Game with Numbers</button>
-        <button id="startGameWithImages">Play Game with Your Own Images</button>
-        <button id="startGameWithEmbeddedImages">Play Game with Embedded Images</button>
-        <!-- <button id="startGameWithRandomImages">Play Game with Randomly Generated Images</button> -->
+        <div class="img-box">
+          <img src="assets/images/double.png" alt="" width="150">
+        </div>
+        <div class="content">
+          <p id="heading">Select Game Mode</p>
+          <!-- buttons in popup container -->
+          <button id="startGameWithAlphabet">Play Game with Alphabet</button>
+          <button id="startGameWithNumbers">Play Game with Numbers</button>
+          <button id="startGameWithImages">Play Game with Your Own Images</button>
+          <button id="startGameWithEmbeddedImages">Play Game with Embedded Images</button>
+          <!-- <button id="startGameWithRandomImages">Play Game with Randomly Generated Images</button> -->
+        </div>
       </div>
 
       <div class="upload-section" style="display: none;">
@@ -146,12 +132,17 @@
         </div>
       </div>
 
-      <div id="uploadPopup">
+      <div id="saveSetting">
         <button id="closePopup" onclick="closePopUp()">
-          <p>X</p>
-          <!-- <i class="bx bx-sync">X</i> -->
+          Save and Exit
         </button>
       </div>
+      <!-- <div id="uploadPopup"> -->
+      <!-- <button id="closePopup" onclick="closePopUp()"> -->
+      <!-- <p>X</p> -->
+      <!-- <i class="bx bx-sync">X</i> -->
+      <!-- </button> -->
+      <!-- </div> -->
     </div>
   </section>
 
@@ -161,10 +152,9 @@
   <script>
 
   </script>
-  <script src="script/bg_music.js"></script>
+  <!-- <script src="script/bg_music.js"></script> -->
   <script src="script/btn_clicks.js"></script>
   <script src="script/game.js"></script>
 </body>
 
 </html>
-
